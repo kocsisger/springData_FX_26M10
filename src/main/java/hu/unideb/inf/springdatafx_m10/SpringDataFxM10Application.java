@@ -31,4 +31,15 @@ public class SpringDataFxM10Application implements CommandLineRunner {
 
         personRepository.save(person);
     }
+
+    public void printData(){
+        System.out.println("Printing data...");
+        Person p = personRepository.findAll().get(0);
+        System.out.println(p);
+    }
+
+    public Person getData(){
+        Person p = personRepository.findAll().get(0);
+        return p;
+    }
 }
